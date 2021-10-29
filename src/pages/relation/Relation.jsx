@@ -24,34 +24,38 @@ export default function Relation() {
     e.preventDefault();
     const user1 = ref.current.value;
     const user2 = ref2.current.value;
-    if (user1 === user2) {
-      toast.error("Same person cannot be a friend");
-    } else {
-      const id1 = curd.Id("users", { name: user1 });
-      const id2 = curd.Id("users", { name: user2 });
-      const pair = [id1, id2];
-      const pair2 = [id2, id1];
-      if (curd.existsCollection("friends")) {
-        const all = curd.readData("friends")[0].allPair;
-        let count = 0;
-        for (let i = 0; i < all.length; i++) {
-          const c = all[i];
-          if (
-            (c[0] == pair[0] && c[1] == pair[1]) ||
-            (c[1] == pair[0] && c[0] == pair[1])
-          ) {
-            count++;
+    if(user1=='' || user2==""){
+      toast.error("Choose friends first");
+    }else{
+      if (user1 === user2) {
+        toast.error("Same person cannot be a friend");
+      } else {
+        const id1 = curd.Id("users", { name: user1 });
+        const id2 = curd.Id("users", { name: user2 });
+        const pair = [id1, id2];
+        const pair2 = [id2, id1];
+        if (curd.existsCollection("friends")) {
+          const all = curd.readData("friends")[0].allPair;
+          let count = 0;
+          for (let i = 0; i < all.length; i++) {
+            const c = all[i];
+            if (
+              (c[0] == pair[0] && c[1] == pair[1]) ||
+              (c[1] == pair[0] && c[0] == pair[1])
+            ) {
+              count++;
+            }
           }
-        }
-        if (count > 0) {
-          toast.error("Already Friend");
-        } else {
-          all.push(pair);
-          all.push(pair2);
-          curd.updateData("friends", 0, { allPair: all });
-          ref.current.value=''
-          ref2.current.value=''
-          toast.success("connected",{ autoClose: 1000 });
+          if (count > 0) {
+            toast.error("Already Friend");
+          } else {
+            all.push(pair);
+            all.push(pair2);
+            curd.updateData("friends", 0, { allPair: all });
+            ref.current.value=''
+            ref2.current.value=''
+            toast.success("connected",{ autoClose: 1000 });
+          }
         }
       }
     }
