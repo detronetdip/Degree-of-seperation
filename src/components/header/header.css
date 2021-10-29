@@ -1,0 +1,29 @@
+header{
+    display: flex;
+    height: 6.5rem;
+    border-bottom: 1px solid #132f4c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+header a{
+    text-decoration: none;
+}
+.right
+{
+    display: flex;
+}
+header .btn{
+    padding: 0.2rem 1.5rem;
+    line-height: 3rem;
+    background-color: #001e3c;
+    border: 1px solid #1e4976;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+header .btn:hover{
+    background-color: #90caf928;
+}

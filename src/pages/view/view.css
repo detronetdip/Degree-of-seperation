@@ -1,0 +1,71 @@
+
+.view .formrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 0;
+}
+.view .formcontainer {
+    background-color: #132f4c;
+    border: 1px solid #265d97;
+  padding: 1.3rem;
+  width: 90%;
+  max-width: 60rem;
+  border-radius: 7px;
+}
+.view .formcontainer form {
+  display: flex;
+  flex-direction: column;
+}
+.view .formcontainer form h4 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: #cfd5e0;
+}
+.view .formcontainer form select,option {
+  width: 100%;
+  padding: 1rem;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  color: #cfd5e0;
+  background-color: #001e3c;
+  border: 1px solid #1e4976;
+  margin: 0.7rem 0;
+  cursor: pointer;
+}
+.view .formcontainer form .btn{
+    padding: 0.2rem 1.5rem;
+    line-height: 3rem;
+    background-color: #001e3c;
+    border: 1px solid #1e4976;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+.view .formcontainer form .btn:hover{
+    background-color: #90caf928;
+}
+.foo-bar{
+  color: red;
+}
+.viewBx{
+  display: flex;
+  align-items: center;
+  padding: 1rem 2.8rem;
+}
+.singlenode{
+  padding: 1rem;
+  font-size: 1.4rem;
+  background-color: #132f4c;
+  border: 1px solid #265d97; 
+  border-radius: 6px;
+  margin: 0.5rem 1.2rem;
+  position: relative;
+  font-weight: 200;
+}
+.indi{
+  font-size: 1.3rem;
+}
