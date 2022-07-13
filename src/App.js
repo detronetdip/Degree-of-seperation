@@ -1,10 +1,10 @@
-import React, { createContext, useReducer } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import View from "./pages/view/View";
 import Relation from "./pages/relation/Relation";
 
-export default function App() {
+export default function App() { 
   return (
     <>
         <Switch>
