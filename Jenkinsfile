@@ -2,7 +2,9 @@ pipeline{
   agent any
   stages{
     stage("permission"){
-      sh "chmod +x"
+      steps{
+        sh "chmod +x"
+      }
     }
     stage("build"){
       steps{
