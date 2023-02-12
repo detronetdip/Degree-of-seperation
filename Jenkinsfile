@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage("permission"){
       steps{
-        sh "chmod +x"
+        sh "chmod +x test.sh"
       }
     }
     stage("build"){
