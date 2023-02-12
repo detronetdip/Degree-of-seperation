@@ -4,6 +4,7 @@ pipeline{
     stage("permission"){
       steps{
         sh "chmod +x test.sh"
+        sh "ls"
       }
     }
     stage("build"){
