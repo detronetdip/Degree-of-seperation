@@ -9,7 +9,7 @@ pipeline{
     }
     stage("build"){
       steps{
-        sh './test.sh'
+        sh 'test.sh'
       }
     }
     stage("test"){
